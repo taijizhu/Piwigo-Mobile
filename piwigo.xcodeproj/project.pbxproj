@@ -18,6 +18,8 @@
 		AD6B2E761F0930CE0040EAD9 /* About.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD6B2E781F0930CE0040EAD9 /* About.strings */; };
 		AD6D203C1EDC45C4003B60E8 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6D203B1EDC45C4003B60E8 /* Reachability.m */; };
 		AD870CD71F54AE110015BFA1 /* ImagesCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = AD870CD61F54AE110015BFA1 /* ImagesCollection.m */; };
+		AD8D36CB1FF5174E00E15B3F /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD8D36CA1FF5174E00E15B3F /* Preferences.storyboard */; };
+		AD8D36D01FF517D800E15B3F /* PreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8D36CF1FF517D800E15B3F /* PreferencesViewController.m */; };
 		AD92B8FB1F1FFF15006E5B63 /* ReleaseNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92B8FA1F1FFF15006E5B63 /* ReleaseNotesViewController.m */; };
 		AD92B8FE1F200083006E5B63 /* ReleaseNotes.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD92B9001F200083006E5B63 /* ReleaseNotes.strings */; };
 		ADB607E81FC9D79000AF28DB /* VideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB607E71FC9D79000AF28DB /* VideoView.m */; };
@@ -170,6 +172,9 @@
 		AD8549351FE98CE300155BA1 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AD870CD61F54AE110015BFA1 /* ImagesCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImagesCollection.m; path = "Album Pictures/ImagesCollection.m"; sourceTree = "<group>"; };
 		AD870CD81F54AE230015BFA1 /* ImagesCollection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ImagesCollection.h; path = "Album Pictures/ImagesCollection.h"; sourceTree = "<group>"; };
+		AD8D36CA1FF5174E00E15B3F /* Preferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Preferences.storyboard; path = piwigo/Preferences/Preferences.storyboard; sourceTree = SOURCE_ROOT; };
+		AD8D36CE1FF517B900E15B3F /* PreferencesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreferencesViewController.h; sourceTree = "<group>"; };
+		AD8D36CF1FF517D800E15B3F /* PreferencesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreferencesViewController.m; sourceTree = "<group>"; };
 		AD92B8F91F1FFEE4006E5B63 /* ReleaseNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReleaseNotesViewController.h; sourceTree = "<group>"; };
 		AD92B8FA1F1FFF15006E5B63 /* ReleaseNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReleaseNotesViewController.m; sourceTree = "<group>"; };
 		AD92B8FF1F200083006E5B63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/ReleaseNotes.strings; sourceTree = "<group>"; };
@@ -396,6 +401,16 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		AD8D36C91FF516B500E15B3F /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				AD8D36CA1FF5174E00E15B3F /* Preferences.storyboard */,
+				AD8D36CE1FF517B900E15B3F /* PreferencesViewController.h */,
+				AD8D36CF1FF517D800E15B3F /* PreferencesViewController.m */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
 		ADE535901F65C01000372CBD /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -588,6 +603,7 @@
 				D89045B31A9469FF00A306FE /* Tags */,
 				D8F113541A9E403E000EC0A6 /* Loading View */,
 				D8BDCB611A6F6B5400D106A8 /* Settings */,
+				AD8D36C91FF516B500E15B3F /* Preferences */,
 				D8D3F7621A7AF27C00AEA7F1 /* Data Cache */,
 				D818E9FC1A74C25900733991 /* Piwigo Data Wrappers */,
 				D87C5A971A6F4F93001763BC /* Network */,
@@ -982,6 +998,7 @@
 				D863EEC71A6A45E800C0A6E9 /* LacunaRegular.TTF in Resources */,
 				AD35CA3A1E9C1EBC00E3B897 /* Images.xcassets in Resources */,
 				AD6B2E731F0930B40040EAD9 /* Localizable.strings in Resources */,
+				AD8D36CB1FF5174E00E15B3F /* Preferences.storyboard in Resources */,
 				AD6B2E761F0930CE0040EAD9 /* About.strings in Resources */,
 				D8F325101A875322007CBDAC /* EditImageDetails.storyboard in Resources */,
 				AD92B8FE1F200083006E5B63 /* ReleaseNotes.strings in Resources */,
@@ -1152,6 +1169,7 @@
 				D89045B21A94662300A306FE /* TagsData.m in Sources */,
 				D8172E1A1AB7C07E00271DB0 /* MoveCategoryViewController.m in Sources */,
 				D863EEC21A6A44BB00C0A6E9 /* UIFont+AppFonts.m in Sources */,
+				AD8D36D01FF517D800E15B3F /* PreferencesViewController.m in Sources */,
 				D847B83D1A7C06A500231886 /* OutlinedText.m in Sources */,
 				D863EECA1A6A484C00C0A6E9 /* PiwigoTextField.m in Sources */,
 				D8D3F7271A794CC900AEA7F1 /* UploadService.m in Sources */,

@@ -10,6 +10,7 @@
 #import "AlbumsViewController.h"
 #import "CategoryPickViewController.h"
 #import "SettingsViewController.h"
+#import "PreferencesViewController.h"
 
 @interface TabBarViewController ()
 
@@ -44,7 +45,14 @@
 		settings.tabBarItem.image = [[UIImage imageNamed:@"preferences"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 		settings.tabBarItem.selectedImage = [UIImage imageNamed:@"preferencesSelected"];
 		[tabs addObject:[[UINavigationController alloc] initWithRootViewController:settings]];
-		
+
+        UIStoryboard *preferencesSB = [UIStoryboard storyboardWithName:@"Preferences" bundle:nil];
+        PreferencesViewController *preferences = [preferencesSB instantiateViewControllerWithIdentifier:@"Preferences"];
+        preferences.title = NSLocalizedString(@"tabBar_preferences", @"Preferences");
+        preferences.tabBarItem.image = [[UIImage imageNamed:@"preferences"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        preferences.tabBarItem.selectedImage = [UIImage imageNamed:@"preferencesSelected"];
+        [tabs addObject:[[UINavigationController alloc] initWithRootViewController:preferences]];        
+
 		[[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor]} forState:UIControlStateNormal];
 		[[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]} forState:UIControlStateSelected];
 		
